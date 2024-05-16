@@ -1,0 +1,73 @@
+body{
+    background: url(img/background.jpg);
+    background-size: cover;
+    font-family: "Press Start 2P", system-ui;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer{
+    background-color: #ffff00;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+}
+
+main{
+    display: flex;
+}
+
+.produtos, .cadastrar{
+    background-color: white;
+    height: 60vh;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 60px 40px;
+}
+
+.cadastrar{
+    width: 35vw;
+    height: 50vh;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.campo-cadastro{
+    width: 350px;
+    height: 38px;
+    border-radius: 30px;
+    border: 2px solid;
+    font-family: "Press Start 2P", system-ui;
+}
+
+.botao-submit, .botao-limpar{
+    width: 164px;
+    height: 33px;
+    border: 3px solid;
+    border-radius: 20px;
+    font-weight: bold;
+    font-family: "Press Start 2P", system-ui;
+}
+
+.botao-submit{
+    background-color: #ffff00;
+    color: black;
+}
+
+.botao-limpar{
+    background-color: black;
+    color: #ffff00;
+}
+
+footer{
+    height: 150px;
+}
