@@ -9,7 +9,7 @@ export default function constroiCard(nome, valor, imagem){
     <div class="card-container--info">
         <p>${nome}</p>
         <div class="card-container--value">
-            <p>${valor}</p>
+            <p>R$ ${valor}</p>
             <i class="fa-solid fa-trash"></i>
         </div>
     </div>`
@@ -21,10 +21,10 @@ async function listaCards(){
     try {
         const listaDB = await requisicoes.conectaDB()
         listaDB.forEach(elemento =>
-            lista.appendChild(constroiCard(elemento.nome, elemento.valor, elemento.imagem)),
+            lista.appendChild(constroiCard(elemento.nome, elemento.valor, elemento.imagem))
         )
     } catch {
-        lista.innerHTML = `<h3>Não foi possível carregar a lista de produtos</h3>`
+        lista.innerHTML = `<h3>Não há produtos cadastrados</h3>`
     }
 }
 

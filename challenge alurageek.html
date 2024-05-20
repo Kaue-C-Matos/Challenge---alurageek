@@ -25,14 +25,14 @@
 
         <section class="cadastrar">
             <h3>CADASTRAR PRODUTOS: </h3>
-            <form>
-                <input type="text" class="campo-cadastro" required placeholder="nome..." data-nome minlength="3">
-                <input type="number" class="campo-cadastro" required placeholder="valor..." data-valor>
+            <form data-formulario>
+                <input type="text" class="campo-cadastro" required placeholder="nome..." data-nome minlength="3" maxlength="25">
+                <input type="text" class="campo-cadastro" required placeholder="valor..." data-valor>
                 <input type="url" class="campo-cadastro" required placeholder="imagem..." data-imagem>
 
                 <div class="botões">
                     <input type="submit" class="botao-submit">
-                    <input value="Limpar" type="submit" class="botao-limpar">
+                    <input value="Limpar" type="button" class="botao-limpar">
                 </div>
             </form>
         </section>
@@ -44,5 +44,6 @@
         <p style="font-size: small;">2024</p>
     </footer>
     <script src="./js/mostrarProdutos.js" type="module"></script>
+    <script src="./js/criarProduto.js" type="module"></script>
 </body>
 </html>
