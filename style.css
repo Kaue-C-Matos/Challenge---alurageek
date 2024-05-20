@@ -22,14 +22,59 @@ main{
 
 .produtos, .cadastrar{
     background-color: white;
-    height: 60vh;
-    width: 60vw;
+    height: 80vh;
+    width: 50vw;
+    text-align: center;
+    margin: 60px 40px;
+    
+}
+
+/*///PRODUTOS///*/
+.produtos{
+    overflow: scroll;
+}
+
+.produtos-container{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+    margin: 10px;
+}
+
+.card{
+    background-color: #ffff00;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 60px 40px;
+    width: 196px;
+    height: 258px;
+    font-size: 15px;
+    padding: 5px;
+    border: 3px solid black;
+    border-radius: 10px;
 }
 
+.card-container--value{
+    display: flex;
+    justify-content: space-between;
+}
+
+.img_produto{
+    width: 176px;
+    height: 174px;
+    border: 6px solid black;
+    border-radius: 20px;
+}
+
+p{
+    margin: 10px;
+}
+
+.fa-solid{
+    margin-top: 10px;
+}
+
+/*///CADASTROS///*/
 .cadastrar{
     width: 35vw;
     height: 50vh;
@@ -39,6 +84,7 @@ form{
     display: flex;
     flex-direction: column;
     gap: 40px;
+    align-items: center;
 }
 
 .campo-cadastro{

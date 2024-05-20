@@ -1,0 +1,16 @@
+{
+    "produtos": [
+        {
+            "id": 1,
+            "nome": "stormtrooper",
+            "valor": 15.99,
+            "imagem": "https://garotasnerds.com/wp-content/uploads/2018/10/caneca-stormtrooper-1.jpg"
+        },
+        {
+            "id": 2,
+            "nome": "darth vader",
+            "valor": 19.99,
+            "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkqVvvJzMlWB1wsR98ADC2tbmXdr5HEtZvb0t6rMQkEQ&s"
+        }
+    ]
+}
