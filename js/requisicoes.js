@@ -21,6 +21,22 @@ async function criarProdutos(nome, valor, imagem){
     return conexaoConvertida
 }
 
+async function deletarProdutos(id){
+    const response = await fetch(`http://localhost:3000/produtos/${id}`,{
+        method: "DELETE",
+        headers: {
+            "Content-type": "application/json"
+        }
+    }) 
+    if (response.status === 200) {
+        alert("produto deletado com sucesso");
+        lista.removeChild(card)
+    } else {
+
+        alert("erro ao excluir o produto, tente novamente mais tarde")
+    }
+}
+
 export const requisicoes = {
-    conectaDB, criarProdutos
+    conectaDB, criarProdutos, deletarProdutos
 }

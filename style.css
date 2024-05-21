@@ -30,10 +30,17 @@ main{
 
 /*///PRODUTOS///*/
 .produtos{
-    overflow: scroll;
+    overflow: auto;
+}
+
+.cabecalho_produtos{
+    position: absolute;
+    background-color: white;
+    width: 45vw;
 }
 
 .produtos-container{
+    padding-top: 50px;
     display: flex;
     flex-flow: row wrap;
     gap: 10px;
@@ -45,9 +52,10 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 196px;
-    height: 258px;
+    min-height: 258px;
+    max-height: 270px;
     font-size: 15px;
     padding: 5px;
     border: 3px solid black;
@@ -77,7 +85,8 @@ p{
 /*///CADASTROS///*/
 .cadastrar{
     width: 35vw;
-    height: 50vh;
+    min-height: 30vh;
+    max-height: 62vh;
 }
 
 form{
@@ -117,4 +126,26 @@ form{
 
 footer{
     height: 150px;
+    text-align: center;
+}
+
+@media (max-width: 500px) {
+    main{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .logo, .produtos, .cadastrar, .cabecalho_produtos{
+        width: 80vw;
+    }
+
+    .campo-cadastro{
+        width: 65vw;
+    }
+
+    .produtos-container{
+        margin-top: 10%;
+        align-items: center;
+        justify-content: center;
+    }
 }

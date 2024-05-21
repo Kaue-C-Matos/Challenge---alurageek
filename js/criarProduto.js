@@ -1,38 +1,27 @@
 import { requisicoes } from "./requisicoes.js";
 
 const formulario = document.querySelector("[data-formulario]")
-const valorInput = document.querySelector("[data-valor]");
-
-function formatarValor(evento){
-    let valor = evento.target.value
-    valor = valor.replace(/[^0-9.,]/g, "")
-    valor.replace(",", ".")
-
-    const valorFormatado = parseFloat(valor)
-    if (!isNaN(valorFormatado)) {
-        evento.target.value = valorFormatado.toFixed(2);
-    } else{
-        valor.setCustomValidity("O preço digitado é inválido")
-    }
-    
-}
-
-valorInput.addEventListener("blur", formatarValor());
-valorInput.addEventListener("input", formatarValor());
 
 async function criarProduto(evento){
     evento.preventDefault()
 
     const nome = document.querySelector("[data-nome]").value;
-    const valor = valorInput.value;
+    const valor = document.querySelector("[data-valor]").value;
     const imagem = document.querySelector("[data-imagem]").value;
-
-    try {
-        await requisicoes.criarProdutos(nome, valor, imagem)
-        console.log(nome)
-    } catch(err){
-        alert(err)
+    
+    let valorFormatado = valor.replace(/,/g, ".")
+    valorFormatado = parseFloat(valorFormatado).toFixed(2)
+    if(isNaN(valorFormatado) || valorFormatado <= 0){
+        alert("digite um número válido")
+        evento.preventDefault()
+    }else{
+        try {
+            await requisicoes.criarProdutos(nome, valorFormatado, imagem)
+        } catch(err){
+            alert(err)
+        }
     }
+
 }
 
 formulario.addEventListener("submit", evento =>criarProduto(evento))
