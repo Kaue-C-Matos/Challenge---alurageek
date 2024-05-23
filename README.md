@@ -11,8 +11,6 @@ Um desafio passado a mim pela Alura através do programa ONE, onde é realizado 
 - `Funcionalidade 2`: cadastrar novos produtos
 - `Funcionalidade 3`: deletar produtos
 
-<video controls src="Apresentação alurageek-1.mp4" title="demonstração"></video>
-
 # 🛠️ Antes de executar o projeto
 
 - Se ainda não possui, baixe o **json-server** no terminal utilizando `npm install -g json-server`
