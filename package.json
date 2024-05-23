@@ -1,0 +1,16 @@
+{
+  "name": "challenge---alurageek",
+  "version": "1.0.0",
+  "description": "![json-server](https://img.shields.io/badge/json_server-green)\r ![lançamento](https://img.shields.io/badge/release_date-may_2024-blue)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.4"
+  }
+}
