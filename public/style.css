@@ -1,5 +1,5 @@
 body{
-    background: url(img/background.jpg);
+    background: url(../img/background.jpg);
     background-size: cover;
     font-family: "Press Start 2P", system-ui;
     margin: 0;
@@ -53,9 +53,9 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 196px;
-    min-height: 258px;
-    max-height: 270px;
+    width: 185px;
+    min-height: 50%;
+    max-height: 60%;
     font-size: 15px;
     padding: 5px;
     border: 3px solid black;
@@ -63,7 +63,7 @@ main{
 }
 
 .img_produto{
-    width: 176px;
+    width: 175px;
     height: 174px;
     border: 6px solid black;
     border-radius: 20px;
@@ -148,5 +148,6 @@ footer{
         margin-top: 10%;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
     }
 }
