@@ -17,6 +17,7 @@ async function criarProduto(evento){
     }else{
         try {
             await requisicoes.criarProdutos(nome, valorFormatado, imagem)
+            window.location.reload()
         } catch(err){
             alert(err)
         }

@@ -18,7 +18,7 @@ export default function constroiCard(nome, valor, imagem, id){
     card.querySelector(".fa-trash").addEventListener("click", async() =>{
         const cardId = card.dataset.id;
         await requisicoes.deletarProdutos(cardId);
-        
+        lista.removeChild(card)
     })
 
     return card

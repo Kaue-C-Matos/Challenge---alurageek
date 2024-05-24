@@ -30,7 +30,6 @@ async function deletarProdutos(id){
     }) 
     if (response.status === 200) {
         alert("produto deletado com sucesso");
-        lista.removeChild(card)
     } else {
 
         alert("erro ao excluir o produto, tente novamente mais tarde")
