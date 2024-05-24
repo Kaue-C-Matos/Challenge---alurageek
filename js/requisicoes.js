@@ -1,11 +1,11 @@
 async function conectaDB(){
-    const conexao = await fetch("http://localhost:3000/produtos")
+    const conexao = await fetch("https://host-alurageek.vercel.app/produtos")
     const conexaoConvertida = await conexao.json()
     return conexaoConvertida
 }
 
 async function criarProdutos(nome, valor, imagem){
-    const conexao = await fetch("http://localhost:3000/produtos", {
+    const conexao = await fetch("https://host-alurageek.vercel.app/produtos", {
         method: "POST",
         headers: {
             "Content-type": "application/json"
@@ -22,7 +22,7 @@ async function criarProdutos(nome, valor, imagem){
 }
 
 async function deletarProdutos(id){
-    const response = await fetch(`http://localhost:3000/produtos/${id}`,{
+    const response = await fetch(`https://host-alurageek.vercel.app/produtos/${id}`,{
         method: "DELETE",
         headers: {
             "Content-type": "application/json"
